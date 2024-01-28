@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html">  <!-- 1)This is an SEO Change -->
     <title>Personal Budget</title>
     <meta name="description" content="A free personal budger app">
     <meta name="keywords" content="app free budget finance">
@@ -13,21 +14,23 @@
 
 <a href="#main" class="skip">Skip to content</a>
 
-    <nav>
+<nav aria-label="Main Navigation"><!--1) A11y Change: Added aria-label for navigation -->
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/login.html">Login</a></li>
-            <li><a href="https://google.com">Google</a></li>
+            <li><a href="/" aria-label="Home">Home</a></li> <!--2) A11y Change: Added aria-label for navigation -->
+            <li><a href="about.html" aria-label="About">About</a></li> 
+            <li><a href="login.html" aria-label="Login">Login</a></li>
+            <link rel="canonical" href="https://google.com">  <!-- 2)This is an SEO Change -->
         </ul>
     </nav>
+    <header> <!-- 2) Semantic HTML Change -->
+  
+        <div class="hero">
+            <h1>Personal Budget</h1>
+            <h2>The Best Personal Budget Management App</h2><!--3) SEO Change: Enhanced the description with a new header -->
+        </div>
+    </header>
 
-    <div class="hero">
-        <h1>Personal Budget</h1>
-        <h2>A personal-budget management app</h2>
-    </div>
-
-    <main class="center" id="main">
+    <main class="container center" id="main">
 
         <div class="page-area">
 
@@ -42,7 +45,7 @@
     
             <article>
                 <h1>Alerts</h1>
-                <p>
+                <p class="hero">
                     What if your clothing budget ended? You will get an alert. The goal is to never go over the budget.
                 </p>
             </article>
@@ -98,12 +101,25 @@
         </div>
 
     </main>
-
-    <footer class="bottom">
+    <div class="skip">
+        <!-- 3)This is an A11y Change -->
+        <a href="#main" role="link" aria-label="Watch Content"> Back to Content </a>
+    </div>
+    <div class="bottom">
         <div class="center">
-            All rights reserved &copy; Fabio Nolasco
+            <footer>All rights reserved &copy; Nitish Reddy</footer><!-- 3)This is a Semantic HTML Change -->
+            
         </div>
-    </footer>
+    </div>
+    <aside> <!-- 3) Semantic HTML change added links for additional content -->
+        <div class="related-links">
+            <h2>Related Links</h2>
+            <ul> 
+            <li><a href="help.html">Help</a></li>
+
+            </ul>
+        </div>
+    </aside>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
