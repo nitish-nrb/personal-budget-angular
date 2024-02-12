@@ -1,0 +1,8 @@
+<nav aria-label="Main Navigation"><!--1) A11y Change: Added aria-label for navigation -->
+    <ul>
+        <li><a [routerLink]="['/']" aria-label="Home">Home</a></li> <!--2) A11y Change: Added aria-label for navigation -->
+        <li><a [routerLink]="['/about']" aria-label="About">About</a></li> 
+        <li><a [routerLink]="['/login']" aria-label="Login">Login</a></li>
+        <li><a [routerLink]="['/contact']" aria-label="Contact">Contact</a></li>
+    </ul>
+</nav>
